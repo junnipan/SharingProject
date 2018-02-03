@@ -12,7 +12,11 @@
          <children>
             <HBox fx:id="hbox" prefHeight="50.0" prefWidth="400.0" translateX="-100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
-                 
+                  <ImageView fitHeight="50.0" fitWidth="100.0" onMouseClicked="#mouseClickedReturn" onMouseEntered="#mouseEnteredLogo" onMouseExited="#mouseExitedLogo" pickOnBounds="true" preserveRatio="true" scaleX="0.5" scaleY="0.5" translateX="50.0">
+                     <image>
+                        <Image url="@../../res/icons8-back-100.png" />
+                     </image>
+                  </ImageView>
                   <ImageView fitHeight="50.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" scaleY="0.9" translateX="55.0">
                      <image>
                         <Image url="@../../res/logo.png" />
@@ -21,8 +25,25 @@
                </children></HBox>
             <HBox fx:id="hbox0" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: WHITE;" translateX="95.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
-                 
-
+                  <ImageView fitHeight="50.0" fitWidth="100.0" onMouseClicked="#mouseClickedShare" pickOnBounds="true" preserveRatio="true" translateX="-10.0">
+                     <image>
+                        <Image url="@../../res/button_share.png" />
+                     </image>
+                  </ImageView>
+                  <HBox onMouseEntered="#mouseEnteredLogIn" onMouseExited="#mouseExitedLogIn" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../res/icons8-male-user-100.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="50.0" fitWidth="100.0" onMouseClicked="#mouseClickedLogIn" pickOnBounds="true" preserveRatio="true" translateX="10.0">
+                           <image>
+                              <Image url="@../../res/button_log-in.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
                </children>
             </HBox>
          </children>
@@ -48,7 +69,16 @@
             </ImageView>
             <HBox prefHeight="300.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0">
                <children>
-                 
+                  <ImageView fx:id="textBook" fitHeight="300.0" fitWidth="600.0" onMouseClicked="#mouseClickedTextbook" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" pickOnBounds="true" preserveRatio="true" scaleX="0.9" scaleY="0.9" translateX="5.0">
+                     <image>
+                        <Image url="@../../res/textbook.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="videoGame" fitHeight="300.0" fitWidth="600.0" onMouseClicked="#mouseClickedVideogame" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" pickOnBounds="true" preserveRatio="true" scaleX="0.9" scaleY="0.9" translateX="-5.0">
+                     <image>
+                        <Image url="@../../res/videogame.png" />
+                     </image>
+                  </ImageView>
                </children>
             </HBox>
          </children>
