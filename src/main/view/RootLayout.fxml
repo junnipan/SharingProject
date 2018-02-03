@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane fx:id="rootLayout" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.view.RootLayoutController">
+   <top>
+      <AnchorPane fx:id="slidepic1" prefHeight="50.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox fx:id="hbox" prefHeight="50.0" prefWidth="400.0" translateX="-100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                 
+                  <ImageView fitHeight="50.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" scaleY="0.9" translateX="55.0">
+                     <image>
+                        <Image url="@../../res/logo.png" />
+                     </image>
+                  </ImageView>
+               </children></HBox>
+            <HBox fx:id="hbox0" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: WHITE;" translateX="95.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                 
+
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane fx:id="centerpane" prefHeight="450.0" prefWidth="1200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="35.0" fitWidth="400.0" layoutX="440.0" layoutY="415.0" pickOnBounds="true" preserveRatio="true" translateX="400.0" AnchorPane.leftAnchor="0.0">
+               <image>
+                  <Image url="@../../res/button_are-you-looking-for.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="wide00" fitHeight="400.0" fitWidth="1200.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@../../res/wide00.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="wide0" fitHeight="400.0" fitWidth="1200.0" layoutX="10.0" layoutY="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@../../res/wide0.png" />
+               </image>
+            </ImageView>
+            <HBox prefHeight="300.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0">
+               <children>
+                 
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
