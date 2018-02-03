@@ -1,7 +1,12 @@
 package main.view;
 
+import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
 import javafx.animation.ParallelTransition;
+import javafx.animation.Timeline;
 import javafx.animation.TranslateTransition;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseButton;
@@ -9,7 +14,6 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.util.Duration;
-
 
 public class ShareController {
 	
@@ -29,7 +33,21 @@ public class ShareController {
 	private AnchorPane thisPane;
 	
 	public static int shareId;
+	
+	private double scaleXB;
+	private double scaleYB;
+	
+	@FXML
+	public void initialize() {
 		
+		thisPane.setOpacity(0);
+		
+		scaleXB = Book.getScaleX();
+		scaleYB = Book.getScaleY();
+		
+		shareId = 0;
+	}
+	
 	@FXML
 	public void mouseClickedTextbook(MouseEvent evt) {
 		
@@ -83,5 +101,40 @@ public class ShareController {
 		
 		pt.play();
 	}
+    
+    @FXML
+	public void mouseEntered(MouseEvent evt) {
+
+		Timeline timeline = new Timeline();
+		
+		ImageView img = (ImageView)evt.getSource();
+		
+		KeyValue endValueX = new KeyValue(img.scaleXProperty(), 0.95);
+		KeyValue endValueY = new KeyValue(img.scaleYProperty(), 0.95);
+		KeyFrame endFrame = new KeyFrame(Duration.millis(200), endValueX, endValueY);
+		
+		timeline.getKeyFrames().add(endFrame);
+		
+		timeline.play();
+		
+	}
+	
+	@FXML
+	public void mouseExited(MouseEvent evt) {
+		
+		Timeline timeline = new Timeline();
+		
+		ImageView img = (ImageView)evt.getSource();
+		
+		KeyValue endValueX = new KeyValue(img.scaleXProperty(), scaleXB);
+		KeyValue endValueY = new KeyValue(img.scaleYProperty(), scaleYB);
+		KeyFrame endFrame = new KeyFrame(Duration.millis(200), endValueX, endValueY);
+		
+		timeline.getKeyFrames().add(endFrame);
+		
+		timeline.play();
+	}
+	
+	
 
 }
