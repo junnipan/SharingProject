@@ -26,7 +26,7 @@ public class Main extends Application{
 		// TODO Auto-generated method stub
     	
     		textBookData.add(new TextBook("Control System Engineering", 160, 7, "MECHTRON 3DX4", "This course is hard."));
-    		textBookData.get(0).setImg("/res/bookCover/textbook1.png");
+    		textBookData.get(0).setImg("res/bookCover/textbook1.png");
     		this.primaryStage = primaryStage;
         this.primaryStage.setTitle("Sharing Project");
         initRootLayout();
