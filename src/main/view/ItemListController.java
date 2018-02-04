@@ -1,6 +1,5 @@
 package main.view;
 
-import javafx.animation.FadeTransition;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
@@ -11,6 +10,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.util.Duration;
+import main.Main;
 
 
 
@@ -18,20 +18,46 @@ public class ItemListController {
 	
 	private RootLayoutController root;
 	
+	private Main main;
+	
 	@FXML
 	private AnchorPane thisPane;
 		
 	public static int shareId;
 	
+	private ImageView book0;
+	
+	private ImageView book1;
+	
+	private ImageView book2;
+	
+	private ImageView book3;
+	
+	private ImageView book4;
+	
+	private ImageView book5;
+	
 	@FXML
 	public void initialize() {
+		
+		loadBookData();
 		
 		thisPane.setOpacity(0);
 		
 		shareId = 0;
 	}
+	
+	public void setMain(Main main) {
+		this.main = main;
+	}
 		
-	 @FXML
+	 private void loadBookData() {
+		
+		 book0.setImage(null);
+		
+	}
+
+	@FXML
 	 public void mouseEntered(MouseEvent evt) {
 
 			Timeline timeline = new Timeline();

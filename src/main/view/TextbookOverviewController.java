@@ -15,6 +15,8 @@ public class TextbookOverviewController {
 		
 		thisPane.setOpacity(0);
 		
+		
+		
 	}
 	
 	public void setRoot(RootLayoutController root) {

@@ -19,16 +19,25 @@ public class User {
 	
 	public User(String email, String username, String password, String rpassword, String university, int year) {
 		
-		this.email = new SimpleStringProperty(email);
-		this.username = new SimpleStringProperty(username);
-        this.password = new SimpleStringProperty(password);
+		if(check()) {
+			this.email = new SimpleStringProperty(email);
+			this.username = new SimpleStringProperty(username);
+	        this.password = new SimpleStringProperty(password);
 
-        // Some initial dummy data, just for convenient testing.
-        this.university = new SimpleStringProperty("McMaster");
-        this.year = new SimpleIntegerProperty(year);
+	        // Some initial dummy data, just for convenient testing.
+	        this.university = new SimpleStringProperty("McMaster");
+	        this.year = new SimpleIntegerProperty(year);
+		} else {
+			
+		}
 		
 	}
 	
+	private boolean check() {
+		
+		return true;
+	}
+
 	public String getEmail() {
         return email.get();
     }

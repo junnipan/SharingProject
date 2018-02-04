@@ -8,7 +8,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import main.model.TextBook;
 import main.model.User;
+import main.model.VideoGame;
 
 public class Main extends Application{
 
@@ -16,13 +18,19 @@ public class Main extends Application{
     private BorderPane rootLayout;
     
     private ObservableList<User> userData = FXCollections.observableArrayList();
+    private ObservableList<TextBook> textBookData = FXCollections.observableArrayList();
+    private ObservableList<VideoGame> videoGameData = FXCollections.observableArrayList();
 	
     @Override
 	public void start(Stage primaryStage) throws Exception {
 		// TODO Auto-generated method stub
+    	
+    		textBookData.add(new TextBook("Control System Engineering", 160, 7, "MECHTRON 3DX4", "This course is hard."));
+    		textBookData.get(0).setImg("/res/bookCover/textbook1.png");
     		this.primaryStage = primaryStage;
         this.primaryStage.setTitle("Sharing Project");
         initRootLayout();
+        
 	}
     
     /**

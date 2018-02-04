@@ -327,6 +327,38 @@ public class RootLayoutController {
 			ft.play();
 			
 			
+		} else if( evt.getButton() == MouseButton.PRIMARY && sceneId == 5) {
+			
+			if(listId == 1) {
+				
+				sceneId = 4;
+				FadeTransition ft = new FadeTransition(Duration.millis(800), textbookOverview);		
+				ft.setFromValue(1.0);
+				ft.setToValue(0);
+				ft.setOnFinished(new EventHandler<ActionEvent>() {
+					public void handle(ActionEvent event) {
+						rootLayout.setCenter(itemList);
+						FadeInTransition(itemList, 1500);
+					}
+				});
+				ft.play();
+				
+			} else if (listId == 2) {
+				
+				sceneId = 4;
+				FadeTransition ft = new FadeTransition(Duration.millis(800), videogameOverview);		
+				ft.setFromValue(1.0);
+				ft.setToValue(0);
+				ft.setOnFinished(new EventHandler<ActionEvent>() {
+					public void handle(ActionEvent event) {
+						rootLayout.setCenter(itemList);
+						FadeInTransition(itemList, 1500);
+					}
+				});
+				ft.play();
+				
+			}
+			
 		}
 		
 	}

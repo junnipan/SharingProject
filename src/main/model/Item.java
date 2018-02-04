@@ -46,6 +46,16 @@ public class Item {
 	public IntegerProperty priceProperty() {
 		return price;
 	}
+
+	
+	public Image getImg() {
+		return img;
+	}
+
+
+	public void setImg(String url) {
+		this.img = new Image(url);
+	}
 	
 	
 }

@@ -12,10 +12,12 @@ public class TextBook extends Item{
 	private StringProperty description;
 	
 	public TextBook() {
+		
 		super();
 		this.version.set(1);
 		this.courseId.set("DEFAULT");
 		this.description.set("This is a important book.");
+		
 	}
 	
 	public TextBook(String name, int price, int version, String courseId, String description) {
