@@ -50,6 +50,11 @@
                      </image>
                   </ImageView>
                   <Button layoutX="320.0" layoutY="510.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" stylesheets="@shareButton.css" text="Submit" />
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="800.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" scaleX="1.5" scaleY="1.5">
+                     <image>
+                        <Image url="@../../res/icons8-add-image-100%20(1).png" />
+                     </image>
+                  </ImageView>
                </children></AnchorPane>
             <ImageView fx:id="Book" fitHeight="650.0" fitWidth="600.0" onMouseClicked="#mouseClickedTextbook" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" pickOnBounds="true" preserveRatio="true" scaleX="0.8" scaleY="0.8" style="-fx-background-color: white;">
                <image>
@@ -101,6 +106,11 @@
                   </ImageView>
                   <TextField layoutX="740.0" layoutY="180.0" prefHeight="35.0" prefWidth="250.0" style="-fx-font-size: 20; -fx-font-family: roboto; -fx-text-fill: #999999; -fx-font-weight: 100;" />
                   <Button layoutX="870.0" layoutY="470.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" stylesheets="@shareButton.css" text="Submit" />
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="111.0" pickOnBounds="true" preserveRatio="true" scaleX="1.5" scaleY="1.5">
+                     <image>
+                        <Image url="@../../res/icons8-add-image-100%20(1).png" />
+                     </image>
+                  </ImageView>
                </children></AnchorPane>
          </children>
       </HBox>
