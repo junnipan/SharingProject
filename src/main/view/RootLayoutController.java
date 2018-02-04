@@ -1,7 +1,6 @@
 package main.view;
 
 import java.io.IOException;
-
 import javafx.animation.FadeTransition;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
@@ -20,6 +19,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.util.Duration;
+import main.view.ShareController;
 
 public class RootLayoutController {
 
@@ -42,6 +42,10 @@ public class RootLayoutController {
 	private AnchorPane signUp;
 	
 	private AnchorPane share;
+	
+	private AnchorPane itemList;
+	
+	public ShareController shareController;
 	
 	@FXML
 	private ImageView wide0;
@@ -111,8 +115,33 @@ public class RootLayoutController {
 		if(evt.getButton() == MouseButton.PRIMARY && sceneId == 0) { //right mouse button and the translate of hbox is not 0.
 			
 			sceneId = 4;
-			logoToRight();		
+			
+			FadeTransition ft = new FadeTransition(Duration.millis(800), centerpane);		
+			ft.setFromValue(1.0);
+			ft.setToValue(0);
+			ft.setOnFinished(e -> loadTextBook());
+			ft.play();
+			
+			logoToRight();
+			
 		} 
+		
+	}
+	
+	private void loadTextBook() {
+		
+		try {
+			
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("ItemList.fxml"));
+            itemList = loader.load();           
+            ItemListController controller = loader.getController();
+            controller.setRoot(this);
+			rootLayout.setCenter(itemList);
+			FadeInTransition(itemList, 1500);
+			
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 		
 	}
 	
@@ -160,6 +189,31 @@ public class RootLayoutController {
 			});
 			ft.play();
 			
+		} else if( evt.getButton() == MouseButton.PRIMARY && sceneId == 3) {
+			
+			if( ShareController.shareId == 0) {
+				sceneId = 0;
+				logoToLeft();
+				FadeTransition ft = new FadeTransition(Duration.millis(800), share);		
+				ft.setFromValue(1.0);
+				ft.setToValue(0);
+				ft.setOnFinished(new EventHandler<ActionEvent>() {
+					public void handle(ActionEvent event) {
+						rootLayout.setCenter(centerpane);
+						FadeInTransition(centerpane, 1500);
+					}
+				});
+				ft.play();
+				
+			} else if (ShareController.shareId == 1) {
+				
+				shareController.textBookBack();
+				
+			} else if (ShareController.shareId == 2) {
+				
+				shareController.videoGameBack();
+				
+			}
 			
 		} else if(evt.getButton() == MouseButton.PRIMARY && sceneId == 4) { //right mouse button and the translate of hbox is not 0.
 		
@@ -300,16 +354,21 @@ public class RootLayoutController {
 	private void loadShare() {
 		
 		try {
-			// Load logIn layout from fxml file.
-			share = FXMLLoader.load(getClass().getResource("Share.fxml"));		
+			
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("Share.fxml"));
+            share = loader.load();           
+            shareController = loader.getController();
+            shareController.setRoot(this);
 			rootLayout.setCenter(share);
-			FadeInTransition(share, 1400);
+			FadeInTransition(share, 1500);
 			
         } catch (IOException e) {
             e.printStackTrace();
         }
 		
 	}
+	
+
 	
 	@FXML
 	public void mouseEnteredLogIn(MouseEvent evt) {
@@ -339,9 +398,56 @@ public class RootLayoutController {
 		
 	}
 	
-
+	@FXML
+	public void mouseClickedLogIn(MouseEvent evt) {
+		
+		if(evt.getButton() == MouseButton.PRIMARY) {
+		
+			sceneId = 1;
+			
+			FadeTransition ft = new FadeTransition(Duration.millis(800), centerpane);		
+			ft.setFromValue(1.0);
+			ft.setToValue(0);
+			ft.setOnFinished(e -> loadLogIn());
+			ft.play();
+			
+			logoToRight();
+			
+		}
+		
+	}
 	
-
+	private void loadLogIn() {
+		
+		try {
+			// Load logIn layout from fxml file.
+			//logIn = FXMLLoader.load(getClass().getResource("LogIn.fxml"));
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("LogIn.fxml"));
+            logIn = loader.load();           
+            LogInController controller = loader.getController();
+            controller.setRoot(this);
+			rootLayout.setCenter(logIn);
+			FadeInTransition(logIn, 1500);
+			
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+	}
+	
+	public void loadSignUp() {
+		try {
+			// Load signUp layout from fxml file.
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("SignUp.fxml"));
+            signUp = loader.load();           
+            SignUpController controller = loader.getController();
+            controller.setRoot(this);	
+			rootLayout.setCenter(signUp);
+			FadeInTransition(signUp, 1500);
+			
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+	}
 	
 	private void FadeInTransition(Node pane, int time) {
 		

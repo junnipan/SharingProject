@@ -1,5 +1,6 @@
 package main.view;
 
+import javafx.animation.FadeTransition;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.ParallelTransition;
@@ -17,6 +18,8 @@ import javafx.util.Duration;
 
 public class ShareController {
 	
+	private RootLayoutController root;
+	
 	@FXML
 	private ImageView Book;
 	
@@ -31,6 +34,9 @@ public class ShareController {
 	
 	@FXML
 	private AnchorPane thisPane;
+	
+	@FXML
+	private ImageView Words;
 	
 	public static int shareId;
 	
@@ -80,13 +86,40 @@ public class ShareController {
 		
 		TranslateTransition tTRight = new TranslateTransition(Duration.seconds(1.5), hboxRight);
 		tTRight.setByX(600);
-
+		
+		FadeTransition ft = new FadeTransition(Duration.seconds(1.3), Words);
+		ft.setFromValue(1.0);
+		ft.setToValue(0.0);
+				
 		pt.getChildren().addAll(tTLeft, tTRight); //add endframe to the timeline
 		
+		ft.play();
 		pt.play();		
 	}
 	
-	
+	public void textBookBack() {
+		
+		shareId = 0;
+		
+		ParallelTransition pt = new ParallelTransition();
+		
+		TranslateTransition tTLeft = new TranslateTransition(Duration.seconds(2), hboxLeft);
+		tTLeft.setByX(-1200);
+		
+		TranslateTransition tTRight = new TranslateTransition(Duration.seconds(1.5), hboxRight);
+		tTRight.setByX(-600);
+		
+		FadeTransition ft = new FadeTransition(Duration.seconds(1.3), Words);
+		ft.setFromValue(0.0);
+		ft.setToValue(1.0);
+
+		pt.getChildren().addAll(tTLeft, tTRight); //add endframe to the timeline
+		
+		pt.play();
+		ft.play();
+		
+	}
+    
     public void gameTransit() {
 		
         ParallelTransition pt = new ParallelTransition();
@@ -96,11 +129,39 @@ public class ShareController {
 		
 		TranslateTransition tTRight = new TranslateTransition(Duration.seconds(1.5), hboxRight);
 		tTRight.setByX(-1200);
+		
+		FadeTransition ft = new FadeTransition(Duration.seconds(1.3), Words);
+		ft.setFromValue(1.0);
+		ft.setToValue(0.0);
 
 		pt.getChildren().addAll(tTLeft, tTRight); //add endframe to the timeline
 		
+		ft.play();
 		pt.play();
 	}
+    
+    public void videoGameBack() {
+    	
+    		shareId = 0;
+    	
+    		ParallelTransition pt = new ParallelTransition();
+		
+		TranslateTransition tTLeft = new TranslateTransition(Duration.seconds(2), hboxLeft);
+		tTLeft.setByX(600);		
+		
+		TranslateTransition tTRight = new TranslateTransition(Duration.seconds(1.5), hboxRight);
+		tTRight.setByX(1200);
+		
+		FadeTransition ft = new FadeTransition(Duration.seconds(1.3), Words);
+		ft.setFromValue(0.0);
+		ft.setToValue(1.0);
+
+		pt.getChildren().addAll(tTLeft, tTRight); //add endframe to the timeline
+		
+		ft.play();
+		pt.play();
+    	
+    }
     
     @FXML
 	public void mouseEntered(MouseEvent evt) {
@@ -109,8 +170,8 @@ public class ShareController {
 		
 		ImageView img = (ImageView)evt.getSource();
 		
-		KeyValue endValueX = new KeyValue(img.scaleXProperty(), 0.95);
-		KeyValue endValueY = new KeyValue(img.scaleYProperty(), 0.95);
+		KeyValue endValueX = new KeyValue(img.scaleXProperty(), 0.9);
+		KeyValue endValueY = new KeyValue(img.scaleYProperty(), 0.9);
 		KeyFrame endFrame = new KeyFrame(Duration.millis(200), endValueX, endValueY);
 		
 		timeline.getKeyFrames().add(endFrame);
@@ -136,5 +197,9 @@ public class ShareController {
 	}
 	
 	
+
+	public void setRoot(RootLayoutController root) {
+		this.root = root;
+	}
 
 }
