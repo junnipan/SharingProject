@@ -7,7 +7,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="thisPane" prefHeight="750.0" prefWidth="1200.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.view.VideogameOverviewController">
+<AnchorPane fx:id="thisPane" prefHeight="750.0" prefWidth="1200.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.view.VideogameOverviewController">
    <children>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="525.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -51,5 +51,10 @@
       </ImageView>
       <TextField layoutX="740.0" layoutY="380.0" prefHeight="35.0" prefWidth="250.0" style="-fx-font-size: 20; -fx-font-family: roboto; -fx-text-fill: #999999; -fx-font-weight: 100;" />
       <Button layoutX="870.0" layoutY="665.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" text="Confirm" textFill="#666666" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="121.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true" scaleX="1.5" scaleY="1.5">
+         <image>
+            <Image url="@../../res/icons8-add-image-100%20(1).png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
