@@ -1,10 +1,12 @@
 package main.view;
 
+import javafx.animation.FadeTransition;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
@@ -60,6 +62,20 @@ public class ItemListController {
 		timeline.getKeyFrames().add(endFrame);
 			
 		timeline.play();
+	}
+	
+	@FXML
+	public void mouseClickedItem(MouseEvent evt) {
+		
+		if( evt.getButton() == MouseButton.PRIMARY && RootLayoutController.listId == 1) {
+			
+			root.textbookOverviewTransition();
+			
+		} else if( evt.getButton() == MouseButton.PRIMARY && RootLayoutController.listId == 2) {
+			//System.out.println(RootLayoutController.listId);
+			root.videogameOverviewTransition();
+		}
+		
 	}
 	
 	public void setRoot(RootLayoutController root) {

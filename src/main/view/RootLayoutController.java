@@ -45,6 +45,10 @@ public class RootLayoutController {
 	
 	private AnchorPane itemList;
 	
+	private AnchorPane textbookOverview;
+	
+	private AnchorPane videogameOverview;
+	
 	public ShareController shareController;
 	
 	@FXML
@@ -153,6 +157,35 @@ public class RootLayoutController {
 		
 	}
 	
+	public void textbookOverviewTransition() {
+		
+		sceneId = 5;
+		
+		FadeTransition ft = new FadeTransition(Duration.millis(800), itemList);		
+		ft.setFromValue(1.0);
+		ft.setToValue(0);
+		ft.setOnFinished(e -> loadTextbookOverview());
+		ft.play();
+		
+	}
+	
+	public void loadTextbookOverview() {
+		
+		try {
+			
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("TextbookOverview.fxml"));
+            textbookOverview = loader.load();           
+            TextbookOverviewController controller = loader.getController();
+            controller.setRoot(this);
+			rootLayout.setCenter(textbookOverview);
+			FadeInTransition(textbookOverview, 1500);
+			
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+		
+	}
+	
 	@FXML
 	public void mouseClickedVideoGame(MouseEvent evt) {
 		
@@ -189,6 +222,36 @@ public class RootLayoutController {
         }
 		
 	}
+	
+	public void videogameOverviewTransition() {
+		
+		sceneId = 5;
+		
+		FadeTransition ft = new FadeTransition(Duration.millis(800), itemList);		
+		ft.setFromValue(1.0);
+		ft.setToValue(0);
+		ft.setOnFinished(e -> loadVideogameOverview());
+		ft.play();
+		
+	}
+	
+	public void loadVideogameOverview() {
+		
+		try {
+			
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("VideogameOverview.fxml"));
+            videogameOverview = loader.load();           
+            VideogameOverviewController controller = loader.getController();
+            controller.setRoot(this);
+			rootLayout.setCenter(videogameOverview);
+			FadeInTransition(videogameOverview, 1500);
+			
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+		
+	}
+	
 	
 	@FXML
 	public void mouseClickedReturn(MouseEvent evt) {
