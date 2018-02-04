@@ -1,6 +1,8 @@
 package main.model;
 
 import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class VideoGame extends Item{
@@ -13,17 +15,17 @@ public class VideoGame extends Item{
 	
 	public VideoGame() {
 		super();
-		this.year.set(1900);
-		this.type.set("DEFAULT");
-		this.description.set("This is a interesting game.");
+		this.year = new SimpleIntegerProperty(1900);
+		this.type = new SimpleStringProperty("DEFAULT");
+		this.description = new SimpleStringProperty("This is a interesting game.");
 	}
 	
 	public VideoGame(String name, int price, int year, String type, String description) {
 		
 		super(name, price);
-		this.year.set(year);
-		this.type.set(type);
-		this.description.set(description);
+		this.year = new SimpleIntegerProperty(year);
+		this.type = new SimpleStringProperty(type);
+		this.description = new SimpleStringProperty(description);
 		
 	}
 	

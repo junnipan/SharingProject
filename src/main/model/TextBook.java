@@ -1,6 +1,8 @@
 package main.model;
 
 import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class TextBook extends Item{
@@ -14,18 +16,18 @@ public class TextBook extends Item{
 	public TextBook() {
 		
 		super();
-		this.version.set(1);
-		this.courseId.set("DEFAULT");
-		this.description.set("This is a important book.");
+		this.version = new SimpleIntegerProperty(1);
+		this.courseId = new SimpleStringProperty("DEFAULT");
+		this.description = new SimpleStringProperty("This is a important book.");
 		
 	}
 	
 	public TextBook(String name, int price, int version, String courseId, String description) {
 		
 		super(name, price);
-		this.version.set(version);
-		this.courseId.set(courseId);
-		this.description.set(description);
+		this.version = new SimpleIntegerProperty(version);
+		this.courseId = new SimpleStringProperty(courseId);
+		this.description = new SimpleStringProperty(description);
 		
 	}
 	

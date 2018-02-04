@@ -4,6 +4,8 @@ import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
@@ -25,17 +27,41 @@ public class ItemListController {
 		
 	public static int shareId;
 	
-	private ImageView book0;
+	@FXML
+	private ImageView img0;
 	
-	private ImageView book1;
+	@FXML
+	private Label label0;
 	
-	private ImageView book2;
+	@FXML
+	private ImageView img1;
 	
-	private ImageView book3;
+	@FXML
+	private Label label1;
 	
-	private ImageView book4;
+	@FXML
+	private ImageView img2;
 	
-	private ImageView book5;
+	@FXML
+	private Label label2;
+	
+	@FXML
+	private ImageView img3;
+	
+	@FXML
+	private Label label3;
+	
+	@FXML
+	private ImageView img4;
+	
+	@FXML
+	private Label label4;
+	
+	@FXML
+	private ImageView img5;
+	
+	@FXML
+	private Label label5;
 	
 	@FXML
 	public void initialize() {
@@ -53,7 +79,13 @@ public class ItemListController {
 		
 	 private void loadBookData() {
 		
-		 book0.setImage(null);
+		 img0.setImage(Main.textBookData.get(0).getImg());
+		 //label0
+		 img1.setImage(Main.textBookData.get(1).getImg());
+		 img2.setImage(Main.textBookData.get(2).getImg());
+		 img3.setImage(Main.textBookData.get(3).getImg());
+		 img4.setImage(Main.textBookData.get(4).getImg());
+		 img5.setImage(Main.textBookData.get(5).getImg());
 		
 	}
 

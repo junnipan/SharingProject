@@ -1,6 +1,8 @@
 package main.model;
 
 import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.scene.image.Image;
 
@@ -18,8 +20,8 @@ public class Item {
 	
 	public Item(String name, int price) {
 		
-		this.setName(name);
-		this.setPrice(price);
+		this.name = new SimpleStringProperty(name);
+		this.price = new SimpleIntegerProperty(price);
 		
 	}
 
