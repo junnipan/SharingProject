@@ -19,10 +19,12 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.util.Duration;
+import main.Main;
 import main.view.ShareController;
 
 public class RootLayoutController {
 
+	private Main main;
 	
 	@FXML
 	private HBox hbox;
@@ -119,6 +121,9 @@ public class RootLayoutController {
 		
 	}
 	
+	public void setMain(Main main) {
+		this.main = main;
+	}
 	
 	@FXML
 	public void mouseClickedTextbook(MouseEvent evt) {
@@ -145,9 +150,10 @@ public class RootLayoutController {
 		try {
 			
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("ItemList.fxml"));
-            itemList = loader.load();           
+            itemList = loader.load();
             ItemListController controller = loader.getController();
             controller.setRoot(this);
+            controller.setMain(main);
 			rootLayout.setCenter(itemList);
 			FadeInTransition(itemList, 1500);
 			
