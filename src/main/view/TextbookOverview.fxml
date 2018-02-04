@@ -19,14 +19,14 @@
             <Image url="@../../res/button_name.png" />
          </image>
       </ImageView>
-      <TextField layoutX="730.0" layoutY="130.0" prefHeight="35.0" prefWidth="250.0" style="-fx-font-size: 20; -fx-font-family: roboto; -fx-text-fill: #999999; -fx-font-weight: 100;" />
-      <TextField layoutX="730.0" layoutY="180.0" prefHeight="35.0" prefWidth="250.0" style="-fx-font-size: 20; -fx-font-family: roboto; -fx-text-fill: #999999; -fx-font-weight: 100;" />
+      <TextField fx:id="name" editable="false" layoutX="730.0" layoutY="130.0" prefHeight="35.0" prefWidth="250.0" style="-fx-font-size: 20; -fx-font-family: roboto; -fx-text-fill: #999999; -fx-font-weight: 100;" />
+      <TextField fx:id="courseId" editable="false" layoutX="730.0" layoutY="180.0" prefHeight="35.0" prefWidth="250.0" style="-fx-font-size: 20; -fx-font-family: roboto; -fx-text-fill: #999999; -fx-font-weight: 100;" />
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="520.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../res/button_course-id.png" />
          </image>
       </ImageView>
-      <TextField layoutX="730.0" layoutY="238.0" prefHeight="35.0" prefWidth="250.0" style="-fx-font-size: 20; -fx-font-family: roboto; -fx-text-fill: #999999; -fx-font-weight: 100;" />
+      <TextField fx:id="version" editable="false" layoutX="730.0" layoutY="238.0" prefHeight="35.0" prefWidth="250.0" style="-fx-font-size: 20; -fx-font-family: roboto; -fx-text-fill: #999999; -fx-font-weight: 100;" />
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="530.0" layoutY="235.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../res/button_version.png" />
@@ -43,7 +43,7 @@
             <Image url="@../../res/button_price.png" />
          </image>
       </ImageView>
-      <TextField layoutX="730.0" layoutY="298.0" prefHeight="35.0" prefWidth="250.0" style="-fx-font-size: 20; -fx-font-family: roboto; -fx-text-fill: #999999; -fx-font-weight: 100;" />
+      <TextField fx:id="price" editable="false" layoutX="730.0" layoutY="298.0" prefHeight="35.0" prefWidth="250.0" style="-fx-font-size: 20; -fx-font-family: roboto; -fx-text-fill: #999999; -fx-font-weight: 100;" />
       <TextField layoutX="730.0" layoutY="358.0" prefHeight="35.0" prefWidth="250.0" style="-fx-font-size: 20; -fx-font-family: roboto; -fx-text-fill: #999999; -fx-font-weight: 100;" />
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="525.0" layoutY="355.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -51,5 +51,6 @@
          </image>
       </ImageView>
       <Button layoutX="860.0" layoutY="643.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" text="Confirm" textFill="#666666" />
+      <ImageView fx:id="cover" fitHeight="300.0" fitWidth="400.0" layoutX="138.0" layoutY="178.0" pickOnBounds="true" preserveRatio="true" translateX="50.0" translateY="80.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
    </children>
 </AnchorPane>

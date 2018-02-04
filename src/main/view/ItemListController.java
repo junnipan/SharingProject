@@ -80,12 +80,22 @@ public class ItemListController {
 	 private void loadBookData() {
 		
 		 img0.setImage(Main.textBookData.get(0).getImg());
-		 //label0
+		 label0.setText(Main.textBookData.get(0).getName());
+		 
 		 img1.setImage(Main.textBookData.get(1).getImg());
+		 label1.setText(Main.textBookData.get(1).getName());
+		 
 		 img2.setImage(Main.textBookData.get(2).getImg());
+		 label2.setText(Main.textBookData.get(2).getName());
+		 
 		 img3.setImage(Main.textBookData.get(3).getImg());
+		 label3.setText(Main.textBookData.get(3).getName());
+		 
 		 img4.setImage(Main.textBookData.get(4).getImg());
+		 label4.setText(Main.textBookData.get(4).getName());
+		 
 		 img5.setImage(Main.textBookData.get(5).getImg());
+		 label5.setText(Main.textBookData.get(5).getName());
 		
 	}
 
@@ -127,10 +137,17 @@ public class ItemListController {
 		
 		if( evt.getButton() == MouseButton.PRIMARY && RootLayoutController.listId == 1) {
 			
-			root.textbookOverviewTransition();
+			ImageView imgv = (ImageView)evt.getSource();
+			
+			Image img = imgv.getImage();
+			
+			root.textbookOverviewTransition(img);
 			
 		} else if( evt.getButton() == MouseButton.PRIMARY && RootLayoutController.listId == 2) {
 			//System.out.println(RootLayoutController.listId);
+			
+			Image img = (Image) evt.getSource();
+			
 			root.videogameOverviewTransition();
 		}
 		

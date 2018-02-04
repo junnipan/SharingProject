@@ -9,64 +9,64 @@
 
 <AnchorPane fx:id="thisPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1200.0" style="-fx-background-color: WHITE;" stylesheets="@ItemList.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.view.ItemListController">
    <children>
-      <Pane onMouseClicked="#mouseClickedItem" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="330.0" prefWidth="400.0" scaleX="0.8" scaleY="0.8" style="-fx-border-color: grey;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="50.0">
+      <Pane onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="330.0" prefWidth="400.0" scaleX="0.8" scaleY="0.8" style="-fx-border-color: grey;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="50.0">
          <children>
-            <Label alignment="BOTTOM_CENTER" layoutY="300.0" prefHeight="30.0" prefWidth="400.0" text="Label 1">
+            <Label fx:id="label0" alignment="BOTTOM_CENTER" layoutY="300.0" prefHeight="30.0" prefWidth="400.0" text="Label 0">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <ImageView fx:id="img0" fitHeight="300.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="img0" fitHeight="300.0" fitWidth="400.0" onMouseClicked="#mouseClickedItem" pickOnBounds="true" preserveRatio="true" />
          </children>
       </Pane>
-      <Pane onMouseClicked="#mouseClickedItem" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="330.0" prefWidth="400.0" scaleX="0.8" scaleY="0.8" style="-fx-border-color: grey;" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="50.0">
+      <Pane onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="330.0" prefWidth="400.0" scaleX="0.8" scaleY="0.8" style="-fx-border-color: grey;" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="50.0">
          <children>
-            <Label alignment="BOTTOM_CENTER" layoutY="300.0" prefHeight="30.0" prefWidth="400.0" text="Label 2">
+            <Label fx:id="label1" alignment="BOTTOM_CENTER" layoutY="300.0" prefHeight="30.0" prefWidth="400.0" text="Label 1">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <ImageView fx:id="img1" fitHeight="300.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="img1" fitHeight="300.0" fitWidth="400.0" onMouseClicked="#mouseClickedItem" pickOnBounds="true" preserveRatio="true" />
          </children>
       </Pane>
-      <Pane layoutX="775.0" layoutY="80.0" onMouseClicked="#mouseClickedItem" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="330.0" prefWidth="400.0" scaleX="0.8" scaleY="0.8" style="-fx-border-color: grey;" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+      <Pane layoutX="775.0" layoutY="80.0" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="330.0" prefWidth="400.0" scaleX="0.8" scaleY="0.8" style="-fx-border-color: grey;" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
          <children>
-            <Label alignment="BOTTOM_CENTER" layoutY="300.0" prefHeight="30.0" prefWidth="400.0" text="Label 3">
+            <Label fx:id="label2" alignment="BOTTOM_CENTER" layoutY="300.0" prefHeight="30.0" prefWidth="400.0" text="Label 2">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <ImageView fx:id="img2" fitHeight="300.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="img2" fitHeight="300.0" fitWidth="400.0" onMouseClicked="#mouseClickedItem" pickOnBounds="true" preserveRatio="true" />
          </children>
       </Pane>
-      <Pane layoutX="59.0" layoutY="376.0" onMouseClicked="#mouseClickedItem" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="330.0" prefWidth="400.0" scaleX="0.8" scaleY="0.8" style="-fx-border-color: grey;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0">
+      <Pane layoutX="59.0" layoutY="376.0" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="330.0" prefWidth="400.0" scaleX="0.8" scaleY="0.8" style="-fx-border-color: grey;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0">
          <children>
-            <Label alignment="BOTTOM_CENTER" layoutY="300.0" prefHeight="30.0" prefWidth="400.0" text="Label 4">
+            <Label fx:id="label3" alignment="BOTTOM_CENTER" layoutY="300.0" prefHeight="30.0" prefWidth="400.0" text="Label 3">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <ImageView fx:id="img3" fitHeight="300.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="img3" fitHeight="300.0" fitWidth="400.0" onMouseClicked="#mouseClickedItem" pickOnBounds="true" preserveRatio="true" />
          </children>
       </Pane>
-      <Pane layoutX="369.0" layoutY="367.0" onMouseClicked="#mouseClickedItem" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="330.0" prefWidth="400.0" scaleX="0.8" scaleY="0.8" style="-fx-border-color: grey;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="400.0">
+      <Pane layoutX="369.0" layoutY="367.0" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="330.0" prefWidth="400.0" scaleX="0.8" scaleY="0.8" style="-fx-border-color: grey;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="400.0">
          <children>
-            <Label alignment="BOTTOM_CENTER" layoutY="300.0" prefHeight="30.0" prefWidth="400.0" text="Label 5">
+            <Label fx:id="label4" alignment="BOTTOM_CENTER" layoutY="300.0" prefHeight="30.0" prefWidth="400.0" text="Label 4">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <ImageView fx:id="img4" fitHeight="300.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="img4" fitHeight="300.0" fitWidth="400.0" onMouseClicked="#mouseClickedItem" pickOnBounds="true" preserveRatio="true" />
          </children>
       </Pane>
-      <Pane layoutX="732.0" layoutY="377.0" onMouseClicked="#mouseClickedItem" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="330.0" prefWidth="400.0" scaleX="0.8" scaleY="0.8" style="-fx-border-color: grey;" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="0.0">
+      <Pane layoutX="732.0" layoutY="377.0" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="330.0" prefWidth="400.0" scaleX="0.8" scaleY="0.8" style="-fx-border-color: grey;" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <Label alignment="BOTTOM_CENTER" layoutY="300.0" prefHeight="30.0" prefWidth="400.0" text="Label 6">
+            <Label fx:id="label5" alignment="BOTTOM_CENTER" layoutY="300.0" prefHeight="30.0" prefWidth="400.0" text="Label 5">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <ImageView fx:id="img5" fitHeight="300.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="img5" fitHeight="300.0" fitWidth="400.0" onMouseClicked="#mouseClickedItem" pickOnBounds="true" preserveRatio="true" />
          </children>
       </Pane>
       <ImageView fitHeight="50.0" fitWidth="150.0" layoutX="952.0" layoutY="653.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="0.0">

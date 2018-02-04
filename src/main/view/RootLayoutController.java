@@ -12,6 +12,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
@@ -163,19 +164,19 @@ public class RootLayoutController {
 		
 	}
 	
-	public void textbookOverviewTransition() {
+	public void textbookOverviewTransition(Image img) {
 		
 		sceneId = 5;
 		
 		FadeTransition ft = new FadeTransition(Duration.millis(800), itemList);		
 		ft.setFromValue(1.0);
 		ft.setToValue(0);
-		ft.setOnFinished(e -> loadTextbookOverview());
+		ft.setOnFinished(e -> loadTextbookOverview(img));
 		ft.play();
 		
 	}
 	
-	public void loadTextbookOverview() {
+	public void loadTextbookOverview(Image img) {
 		
 		try {
 			
@@ -183,6 +184,7 @@ public class RootLayoutController {
             textbookOverview = loader.load();           
             TextbookOverviewController controller = loader.getController();
             controller.setRoot(this);
+            controller.load(img);
 			rootLayout.setCenter(textbookOverview);
 			FadeInTransition(textbookOverview, 1500);
 			
