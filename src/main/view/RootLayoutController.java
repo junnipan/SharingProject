@@ -366,15 +366,13 @@ public class RootLayoutController {
 				ft.play();
 				
 			}
-			
 		}
-		
 	}
 	
 	public void signUpCancel() {
 		
 		sceneId = 1;
-		FadeTransition ft = new FadeTransition(Duration.millis(800), signUp);		
+		FadeTransition ft = new FadeTransition(Duration.millis(800), signUp);
 		ft.setFromValue(1.0);
 		ft.setToValue(0);
 		ft.setOnFinished(new EventHandler<ActionEvent>() {

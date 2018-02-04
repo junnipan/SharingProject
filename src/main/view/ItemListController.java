@@ -66,7 +66,7 @@ public class ItemListController {
 	@FXML
 	public void initialize() {
 		
-		loadBookData();
+		if(RootLayoutController.listId == 1)loadBookData();
 		
 		thisPane.setOpacity(0);
 		
@@ -146,7 +146,6 @@ public class ItemListController {
 		} else if( evt.getButton() == MouseButton.PRIMARY && RootLayoutController.listId == 2) {
 			//System.out.println(RootLayoutController.listId);
 			
-			Image img = (Image) evt.getSource();
 			
 			root.videogameOverviewTransition();
 		}
