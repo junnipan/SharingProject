@@ -8,18 +8,19 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
+
 <AnchorPane fx:id="thisPane" prefHeight="750.0" prefWidth="1200.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.view.SignUpController">
    <children>
       <TextField accessibleRole="IMAGE_VIEW" accessibleText="please ener your email" layoutX="700.0" layoutY="70.0" prefHeight="25.0" prefWidth="250.0" style="-fx-font-size: 20; -fx-font-family: roboto;" />
       <TextField layoutX="700.0" layoutY="150.0" prefHeight="20.0" prefWidth="250.0" style="-fx-font-size: 20; -fx-font-family: roboto;" />
       <TextField layoutX="700.0" layoutY="390.0" prefWidth="250.0" style="-fx-font-size: 20; -fx-font-family: roboto;" />
       <TextField layoutX="701.0" layoutY="470.0" prefHeight="26.0" prefWidth="259.0" style="-fx-font-size: 20; -fx-font-family: roboto;" />
-      <Button layoutX="550.0" layoutY="560.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" style="-fx-font-size: 20;" text="Create">
+      <Button layoutX="550.0" layoutY="560.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" style="-fx-font-size: 20;" stylesheets="@signUp.css" text="Create">
          <font>
             <Font size="29.0" />
          </font>
       </Button>
-      <Button layoutX="775.0" layoutY="560.0" mnemonicParsing="false" onMouseClicked="#mouseClickedCancel" prefHeight="50.0" prefWidth="150.0" style="-fx-font-size: 20;" text="Cancel">
+      <Button layoutX="775.0" layoutY="560.0" mnemonicParsing="false" onMouseClicked="#mouseClickedCancel" prefHeight="50.0" prefWidth="150.0" style="-fx-font-size: 20;" stylesheets="@signUp.css" text="Cancel">
          <font>
             <Font size="29.0" />
          </font>
@@ -51,7 +52,7 @@
             <Image url="@../../res/button_university%20(1).png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="460.0" layoutY="475.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="440.0" layoutY="475.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../res/button_year%20(2).png" />
          </image>

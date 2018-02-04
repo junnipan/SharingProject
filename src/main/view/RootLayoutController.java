@@ -74,6 +74,12 @@ public class RootLayoutController {
 	 * Overview 5
 	 */
 	public static int sceneId;
+	
+	/*
+	 * textbook 1
+	 * videogame 2
+	 */
+	public static int listId;
 
 	/* Methods */
 	@FXML
@@ -105,6 +111,7 @@ public class RootLayoutController {
 		// End fade
 		
 		sceneId = 0;
+		listId = 0;
 		
 	}
 	
@@ -115,11 +122,12 @@ public class RootLayoutController {
 		if(evt.getButton() == MouseButton.PRIMARY && sceneId == 0) { //right mouse button and the translate of hbox is not 0.
 			
 			sceneId = 4;
+			listId = 1;
 			
 			FadeTransition ft = new FadeTransition(Duration.millis(800), centerpane);		
 			ft.setFromValue(1.0);
 			ft.setToValue(0);
-			ft.setOnFinished(e -> loadTextBook());
+			ft.setOnFinished(e -> loadTextbook());
 			ft.play();
 			
 			logoToRight();
@@ -128,7 +136,7 @@ public class RootLayoutController {
 		
 	}
 	
-	private void loadTextBook() {
+	private void loadTextbook() {
 		
 		try {
 			
@@ -146,14 +154,39 @@ public class RootLayoutController {
 	}
 	
 	@FXML
-	public void mouseClickedVideogame(MouseEvent evt) {
+	public void mouseClickedVideoGame(MouseEvent evt) {
 		
 		if(evt.getButton() == MouseButton.PRIMARY && sceneId == 0) { //right mouse button and the translate of hbox is not 0.
 			
 			sceneId = 4;
+			listId = 2;
+			
+			FadeTransition ft = new FadeTransition(Duration.millis(800), centerpane);		
+			ft.setFromValue(1.0);
+			ft.setToValue(0);
+			ft.setOnFinished(e -> loadVideoGame());
+			ft.play();
+			
 			logoToRight();
 			
 		}
+		
+	}
+	
+	private void loadVideoGame() {
+		
+		try {
+			
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("ItemList.fxml"));
+            itemList = loader.load();           
+            ItemListController controller = loader.getController();
+            controller.setRoot(this);
+			rootLayout.setCenter(itemList);
+			FadeInTransition(itemList, 1500);
+			
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 		
 	}
 	
@@ -219,6 +252,16 @@ public class RootLayoutController {
 		
 			sceneId = 0;
 			logoToLeft();
+			FadeTransition ft = new FadeTransition(Duration.millis(800), itemList);		
+			ft.setFromValue(1.0);
+			ft.setToValue(0);
+			ft.setOnFinished(new EventHandler<ActionEvent>() {
+				public void handle(ActionEvent event) {
+					rootLayout.setCenter(centerpane);
+					FadeInTransition(centerpane, 1500);
+				}
+			});
+			ft.play();
 			
 			
 		}

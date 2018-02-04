@@ -74,7 +74,7 @@
                         <Image url="@../../res/textbook.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="videoGame" fitHeight="300.0" fitWidth="600.0" onMouseClicked="#mouseClickedVideogame" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" pickOnBounds="true" preserveRatio="true" scaleX="0.9" scaleY="0.9" translateX="-5.0">
+                  <ImageView fx:id="videoGame" fitHeight="300.0" fitWidth="600.0" onMouseClicked="#mouseClickedVideoGame" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" pickOnBounds="true" preserveRatio="true" scaleX="0.9" scaleY="0.9" translateX="-5.0">
                      <image>
                         <Image url="@../../res/videogame.png" />
                      </image>

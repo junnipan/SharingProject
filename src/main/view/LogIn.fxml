@@ -9,7 +9,7 @@
 
 <AnchorPane fx:id="thisPane" accessibleRole="BUTTON" prefHeight="750.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.view.LogInController">
    <children>
-      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="500.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true" scaleX="0.9" scaleY="0.9">
+      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="520.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true" scaleX="0.9" scaleY="0.9">
          <image>
             <Image url="@../../res/icons8-male-user-100.png" />
          </image>
