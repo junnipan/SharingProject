@@ -18,14 +18,8 @@ public class ItemListController {
 	
 	@FXML
 	private AnchorPane thisPane;
-	
-	//@FXML
-	//private Pane pane;
-	
+		
 	public static int shareId;
-	
-	private double scaleXB;
-	private double scaleYB;
 	
 	@FXML
 	public void initialize() {

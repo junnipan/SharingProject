@@ -8,9 +8,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 
-<AnchorPane fx:id="thisPane" maxHeight="750.0" maxWidth="1200.0" minHeight="750.0" minWidth="1200.0" prefHeight="750.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.view.ShareController">
+<AnchorPane fx:id="thisPane" maxHeight="750.0" maxWidth="1200.0" minHeight="750.0" minWidth="1200.0" prefHeight="750.0" prefWidth="1200.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.view.ShareController">
    <children>
-      <HBox fx:id="hboxLeft" layoutY="100.0" prefHeight="650.0" prefWidth="1800.0" translateX="-1200.0" AnchorPane.bottomAnchor="0.0">
+      <HBox fx:id="hboxLeft" layoutY="100.0" prefHeight="650.0" prefWidth="1800.0" style="-fx-background-color: white;" translateX="-1200.0" AnchorPane.bottomAnchor="0.0">
          <children>
             <AnchorPane prefHeight="650.0" prefWidth="1200.0" style="-fx-background-color: white;">
                <children>
@@ -51,17 +51,17 @@
                   </ImageView>
                   <Button layoutX="320.0" layoutY="510.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" stylesheets="@shareButton.css" text="Submit" />
                </children></AnchorPane>
-            <ImageView fx:id="Book" fitHeight="650.0" fitWidth="600.0" onMouseClicked="#mouseClickedTextbook" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: white;" translateX="1.0">
+            <ImageView fx:id="Book" fitHeight="650.0" fitWidth="600.0" onMouseClicked="#mouseClickedTextbook" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" pickOnBounds="true" preserveRatio="true" scaleX="0.8" scaleY="0.8" style="-fx-background-color: white;">
                <image>
-                  <Image url="@../../res/book.png" />
+                  <Image url="@../../res/11.jpg" />
                </image></ImageView>
          </children>
       </HBox>
       <HBox fx:id="hboxRight" layoutX="-600.0" layoutY="100.0" prefHeight="650.0" prefWidth="1800.0" translateX="1200.0" AnchorPane.bottomAnchor="0.0">
          <children>
-            <ImageView fx:id="Game" fitHeight="650.0" fitWidth="600.0" onMouseClicked="#mouseClickedVideogame" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="Game" onMouseClicked="#mouseClickedVideogame" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" pickOnBounds="true" preserveRatio="true" scaleX="0.8" scaleY="0.8">
                <image>
-                  <Image url="@../../res/book.png" />
+                  <Image url="@../../res/5.jpg" />
                </image></ImageView>
             <AnchorPane prefHeight="650.0" prefWidth="1200.0" style="-fx-background-color: white;">
                <children>
@@ -104,5 +104,10 @@
                </children></AnchorPane>
          </children>
       </HBox>
+      <ImageView fx:id="Words" fitHeight="150.0" fitWidth="400.0" layoutX="400.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../res/button_lets-start-sharing-here.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
