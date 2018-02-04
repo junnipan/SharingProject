@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="750.0" prefWidth="1200.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="515.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../res/button_description%20(1).png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="540.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../res/button_name.png" />
+         </image>
+      </ImageView>
+      <TextField layoutX="730.0" layoutY="130.0" prefHeight="35.0" prefWidth="250.0" style="-fx-font-size: 20; -fx-font-family: roboto; -fx-text-fill: #999999; -fx-font-weight: 100;" />
+      <TextField layoutX="730.0" layoutY="180.0" prefHeight="35.0" prefWidth="250.0" style="-fx-font-size: 20; -fx-font-family: roboto; -fx-text-fill: #999999; -fx-font-weight: 100;" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="520.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../res/button_course-id.png" />
+         </image>
+      </ImageView>
+      <TextField layoutX="730.0" layoutY="238.0" prefHeight="35.0" prefWidth="250.0" style="-fx-font-size: 20; -fx-font-family: roboto; -fx-text-fill: #999999; -fx-font-weight: 100;" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="530.0" layoutY="235.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../res/button_version.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="480.0" layoutY="360.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../res/button_commet-session.png" />
+         </image>
+      </ImageView>
+      <TextArea layoutX="730.0" layoutY="365.0" prefHeight="200.0" prefWidth="250.0" style="-fx-font-size: 20; -fx-font-faily: roboto; -fx-text-fill: #999999; -fx-font-weigh: 100; -fx-text-capacity: 15;" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="545.0" layoutY="295.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../res/button_price.png" />
+         </image>
+      </ImageView>
+      <TextField layoutX="730.0" layoutY="298.0" prefHeight="35.0" prefWidth="250.0" style="-fx-font-size: 20; -fx-font-family: roboto; -fx-text-fill: #999999; -fx-font-weight: 100;" />
+   </children>
+</AnchorPane>
