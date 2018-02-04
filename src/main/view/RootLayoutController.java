@@ -5,9 +5,11 @@ import java.io.IOException;
 import javafx.animation.FadeTransition;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
+import javafx.animation.ParallelTransition;
 import javafx.animation.PauseTransition;
 import javafx.animation.SequentialTransition;
 import javafx.animation.Timeline;
+import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -20,6 +22,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.util.Duration;
+import main.view.ShareController;
 
 public class RootLayoutController {
 
@@ -160,6 +163,30 @@ public class RootLayoutController {
 			});
 			ft.play();
 			
+		} else if( evt.getButton() == MouseButton.PRIMARY && sceneId == 3) {
+			
+			if( ShareController.shareId == 0) {
+				sceneId = 0;
+				logoToLeft();
+				FadeTransition ft = new FadeTransition(Duration.millis(800), share);		
+				ft.setFromValue(1.0);
+				ft.setToValue(0);
+				ft.setOnFinished(new EventHandler<ActionEvent>() {
+					public void handle(ActionEvent event) {
+						rootLayout.setCenter(centerpane);
+						FadeInTransition(centerpane, 1500);
+					}
+				});
+				ft.play();
+				
+			} else if (ShareController.shareId == 1) {
+				
+				
+			} else if (ShareController.shareId == 2) {
+				
+				
+				
+			}
 			
 		} else if(evt.getButton() == MouseButton.PRIMARY && sceneId == 4) { //right mouse button and the translate of hbox is not 0.
 		
@@ -339,9 +366,41 @@ public class RootLayoutController {
 		
 	}
 	
-
+	@FXML
+	public void mouseClickedLogIn(MouseEvent evt) {
+		
+		if(evt.getButton() == MouseButton.PRIMARY) {
+		
+			sceneId = 1;
+			
+			FadeTransition ft = new FadeTransition(Duration.millis(800), centerpane);		
+			ft.setFromValue(1.0);
+			ft.setToValue(0);
+			ft.setOnFinished(e -> loadLogIn());
+			ft.play();
+			
+			logoToRight();
+			
+		}
+		
+	}
 	
-
+	private void loadLogIn() {
+		try {
+			// Load logIn layout from fxml file.
+			//logIn = FXMLLoader.load(getClass().getResource("LogIn.fxml"));
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("LogIn.fxml"));
+            logIn = loader.load();           
+            LogInController controller = loader.getController();
+            controller.setRoot(this);
+			rootLayout.setCenter(logIn);
+			FadeInTransition(logIn, 1500);
+			
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+	}
+	
 	
 	private void FadeInTransition(Node pane, int time) {
 		
