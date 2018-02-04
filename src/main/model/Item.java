@@ -1,7 +1,6 @@
 package main.model;
 
 import javafx.beans.property.IntegerProperty;
-import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.scene.image.Image;
 
@@ -11,35 +10,42 @@ public class Item {
 	
 	private IntegerProperty price;
 	
-	private StringProperty description;
-	
 	private Image img;
 	
 	public Item() {
-		this(null);
+		this("McHacks", 200);
 	}
 	
-	public Item(String name) {
+	public Item(String name, int price) {
 		
-		this.setName(new SimpleStringProperty(name));
-		
+		this.setName(name);
+		this.setPrice(price);
 		
 	}
 
-	public StringProperty getName() {
+	public String getName() {	
+		return name.get();	
+	}
+	
+	public void setName(String name) {
+		this.name.set(name);
+	}
+	
+	public StringProperty nameProperty() {
 		return name;
 	}
-
-	public void setName(StringProperty name) {
-		this.name = name;
+	
+	public int getPrice() {
+		return price.get();
 	}
-
-	public IntegerProperty getPrice() {
+	
+	public void setPrice(int price) {
+		this.price.set(price);
+	}
+	
+	public IntegerProperty priceProperty() {
 		return price;
 	}
-
-	public void setPrice(IntegerProperty price) {
-		this.price = price;
-	}
+	
 	
 }
